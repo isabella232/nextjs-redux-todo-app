@@ -16,6 +16,13 @@
 
 ## Usage
 
+First define `OPTIMIZELY_ACCOUNT_ID` in your environment (can use something like [direnv](https://direnv.net/)).
+
+Example .envrc
+```bash
+export OPTIMIZELY_ACCOUNT_ID=81391212
+```
+
 ```bash
 # installation
 $ git clone https://github.com/saltyshiomix/nextjs-todo-app.git
@@ -29,3 +36,5 @@ $ yarn dev (or `npm run dev`)
 $ yarn build (or `npm run build`)
 $ yarn start (or `npm start`)
 ```
+
+Open `http://localhost:3000` to load "nextjs_main" snippet from that account; `http://localhost:3000?snippetKey={key}` to load the alternative snippet `{key}` instead.

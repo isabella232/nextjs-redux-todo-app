@@ -12,6 +12,8 @@ import {
 import {
   selectTodoItem,
   selectTodoData,
+  selectSnippetKey,
+  selectSnippetAccountId,
 } from '../selectors';
 import Page from '../components/page';
 
@@ -20,7 +22,9 @@ export default compose(
     createSelector(
       selectTodoItem(),
       selectTodoData(),
-      (item, data) => ({ item, data }),
+      selectSnippetKey(),
+      selectSnippetAccountId(),
+      (item, data, snippetKey, snippetAccountId) => ({ item, data, snippetKey, snippetAccountId }),
     ),
     {
       onChangeTodo,
