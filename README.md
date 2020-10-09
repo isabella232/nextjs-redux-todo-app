@@ -38,3 +38,11 @@ $ yarn start (or `npm start`)
 ```
 
 Open `http://localhost:3000` to load "nextjs_main" snippet from that account; `http://localhost:3000?snippetKey={key}` to load the alternative snippet `{key}` instead.
+
+## Test
+
+After starting the app, run
+```bash
+node test.js > test_results.csv
+```
+It'll write test results to stdout.

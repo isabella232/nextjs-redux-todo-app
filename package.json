@@ -12,7 +12,8 @@
     "docker-build": "docker build -t $ECR_REPO:latest .",
     "docker-push": "docker push $ECR_REPO:latest",
     "deploy": "npm run docker-build && npm run docker-push && auto infra deploy home",
-    "start": "cross-env NODE_ENV=production next start"
+    "start": "cross-env NODE_ENV=production next start",
+    "test": "node test.js"
   },
   "dependencies": {
     "next": "^9.1.4",
@@ -35,6 +36,8 @@
     "@types/recompose": "^0.30.7",
     "@types/redux-logger": "^3.0.7",
     "cross-env": "^6.0.3",
+    "csv": "^5.3.2",
+    "puppeteer": "^5.3.1",
     "typescript": "^3.7.2"
   }
 }
